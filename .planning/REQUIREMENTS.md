@@ -31,10 +31,10 @@
 
 ### Thematic Selection
 
-- [ ] **THEME-01**: Ayah theme is selected based on tool type: Read/Grep/Glob/LS → `ilm` (knowledge); Bash → `tawakkul` (reliance/effort); Write/Edit → `ihsan` (excellence); tool errors → `sabr` (patience)
-- [ ] **THEME-02**: Ayah theme is also influenced by time of day: pre-dawn/morning (Fajr, 4am–9am) → awakening/intention ayahs; midday/afternoon (Dhuhr/Asr, 9am–5pm) → perseverance/effort; evening/night (Maghrib/Isha, 5pm–4am) → gratitude/reflection
-- [ ] **THEME-03**: When tool type and time-of-day themes conflict, tool type takes priority
-- [ ] **THEME-04**: Ayah selection within a theme is random (no repeat of the same ayah within a session)
+- [x] **THEME-01**: Ayah theme is selected based on tool type: Read/Grep/Glob/LS → `ilm` (knowledge); Bash → `tawakkul` (reliance/effort); Write/Edit → `ihsan` (excellence); tool errors → `sabr` (patience)
+- [x] **THEME-02**: Ayah theme is also influenced by time of day: pre-dawn/morning (Fajr, 4am–9am) → awakening/intention ayahs; midday/afternoon (Dhuhr/Asr, 9am–5pm) → perseverance/effort; evening/night (Maghrib/Isha, 5pm–4am) → gratitude/reflection
+- [x] **THEME-03**: When tool type and time-of-day themes conflict, tool type takes priority
+- [x] **THEME-04**: Ayah selection within a theme is random (no repeat of the same ayah within a session)
 
 ### Rate Limiting
 
@@ -99,10 +99,10 @@
 | DISP-03 | Phase 2 | Complete |
 | DISP-05 | Phase 2 | Complete |
 | DISP-06 | Phase 2 | Complete |
-| THEME-01 | Phase 2 | Pending |
-| THEME-02 | Phase 2 | Pending |
-| THEME-03 | Phase 2 | Pending |
-| THEME-04 | Phase 2 | Pending |
+| THEME-01 | Phase 2 | Complete |
+| THEME-02 | Phase 2 | Complete |
+| THEME-03 | Phase 2 | Complete |
+| THEME-04 | Phase 2 | Complete |
 | RATE-01 | Phase 2 | Pending |
 | RATE-02 | Phase 2 | Pending |
 | RATE-03 | Phase 2 | Pending |
