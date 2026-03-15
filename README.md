@@ -47,8 +47,8 @@ No dependencies. The plugin uses zero external packages.
 ### Install via marketplace (recommended)
 
 ```
-/plugin marketplace add AhsanAyaz/claude-code-plugins
-/plugin install claude-halal-code@claude-code-plugins
+/plugin marketplace add AhsanAyaz/cwa-cc-plugins
+/plugin install claude-halal-code@cwa-cc-plugins
 ```
 
 That's it. The plugin loads automatically on every session from then on.
