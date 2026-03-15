@@ -38,15 +38,15 @@
 
 ### Rate Limiting
 
-- [ ] **RATE-01**: PreToolUse hook enforces a minimum 60-second cooldown between ayah displays (prevents ayah spam across rapid tool calls)
-- [ ] **RATE-02**: Cooldown state is stored in a temp file (e.g. `/tmp/claude-code-quran-last-display`) and checked before rendering
-- [ ] **RATE-03**: SessionStart and Stop hooks always display (no cooldown applied to session boundary events)
+- [x] **RATE-01**: PreToolUse hook enforces a minimum 60-second cooldown between ayah displays (prevents ayah spam across rapid tool calls)
+- [x] **RATE-02**: Cooldown state is stored in a temp file (e.g. `/tmp/claude-code-quran-last-display`) and checked before rendering
+- [x] **RATE-03**: SessionStart and Stop hooks always display (no cooldown applied to session boundary events)
 - [ ] **RATE-04**: PreCompact hook always displays (context compaction is a significant wait moment — no cooldown)
 
 ### Lifecycle Hooks
 
 - [x] **HOOK-01**: SessionStart hook displays an opening ayah when a new Claude Code session begins (and triggers background cache refresh as a detached child process)
-- [ ] **HOOK-02**: PreToolUse hook displays an ayah when Claude is about to use a tool (rate-limited per RATE-01)
+- [x] **HOOK-02**: PreToolUse hook displays an ayah when Claude is about to use a tool (rate-limited per RATE-01)
 - [ ] **HOOK-03**: PreCompact hook displays an ayah during context compaction
 - [ ] **HOOK-04**: Stop hook displays a closing ayah when the session ends (Stop hook is used instead of SessionEnd to avoid 1.5s timeout)
 
@@ -103,11 +103,11 @@
 | THEME-02 | Phase 2 | Complete |
 | THEME-03 | Phase 2 | Complete |
 | THEME-04 | Phase 2 | Complete |
-| RATE-01 | Phase 2 | Pending |
-| RATE-02 | Phase 2 | Pending |
-| RATE-03 | Phase 2 | Pending |
+| RATE-01 | Phase 2 | Complete |
+| RATE-02 | Phase 2 | Complete |
+| RATE-03 | Phase 2 | Complete |
 | RATE-04 | Phase 2 | Pending |
-| HOOK-02 | Phase 2 | Pending |
+| HOOK-02 | Phase 2 | Complete |
 | HOOK-03 | Phase 3 | Pending |
 | HOOK-04 | Phase 3 | Pending |
 | DATA-03 | Phase 4 | Pending |

@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-display-rendering-and-theming-02-02-PLAN.md
-last_updated: "2026-03-15T00:06:46.623Z"
+stopped_at: Completed 02-display-rendering-and-theming-02-03-PLAN.md
+last_updated: "2026-03-15T00:10:01.668Z"
 last_activity: 2026-03-14 — Roadmap created, ready for Phase 1 planning
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 7
-  completed_plans: 5
+  completed_plans: 6
   percent: 0
 ---
 
@@ -56,6 +56,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-foundation-and-hook-scaffold P03 | 15min | 4 tasks | 4 files |
 | Phase 02-display-rendering-and-theming P01 | 20min | 2 tasks | 4 files |
 | Phase 02-display-rendering-and-theming P02 | 8min | 2 tasks | 2 files |
+| Phase 02-display-rendering-and-theming P03 | 2min | 1 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -80,6 +81,9 @@ Recent decisions affecting current work:
 - [Phase 02-display-rendering-and-theming]: selectAyah reads fallback.json directly (not via loadAyah) to get full theme pool for no-repeat filtering — loadAyah only returns one random item
 - [Phase 02-display-rendering-and-theming]: resolveTheme never returns null — always produces a theme string (TOOL_THEME_MAP hit or time-of-day fallback)
 - [Phase 02-display-rendering-and-theming]: No-repeat session state stored in /tmp/claude-code-quran-sessions/{sessionId}.json as JSON array of 'surah:ayah' keys; pool resets on exhaustion
+- [Phase 02-display-rendering-and-theming]: Rate-limit logic lives exclusively in pre-tool-use.js, never in session-start.js (RATE-03)
+- [Phase 02-display-rendering-and-theming]: PreToolUse hook uses matcher='' to match all tool types; no async field — sync required for systemMessage
+- [Phase 02-display-rendering-and-theming]: toolName='error' (sabr theme) not synthesized in PreToolUse — reserved for Phase 3 PostToolUse after tool completion
 
 ### Pending Todos
 
@@ -91,6 +95,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-15T00:06:46.620Z
-Stopped at: Completed 02-display-rendering-and-theming-02-02-PLAN.md
+Last session: 2026-03-15T00:10:01.665Z
+Stopped at: Completed 02-display-rendering-and-theming-02-03-PLAN.md
 Resume file: None
