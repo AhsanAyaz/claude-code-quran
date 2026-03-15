@@ -1,7 +1,8 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { loadAyah } = require('./lib/load-ayah');
+const { selectAyah } = require('./lib/select-ayah');
+const { renderPanel } = require('./lib/render-panel');
 
 /**
  * Resolve the plugin root using three strategies in priority order:
@@ -35,31 +36,16 @@ function resolvePluginRoot() {
   return path.resolve(__dirname, '..');
 }
 
-/**
- * Format an ayah object into the Phase 1 display block (CONTEXT.md LOCKED format).
- */
-function formatAyah(ayah) {
-  return [
-    '',
-    '------',
-    ayah.arabic,
-    ayah.transliteration,
-    '"' + ayah.translation + '"',
-    '\u2014 ' + ayah.surah_name + ' ' + ayah.surah_number + ':' + ayah.ayah_number,
-    '------',
-    ''
-  ].join('\n');
-}
-
 function main() {
   const pluginRoot = resolvePluginRoot();
-  const ayah = loadAyah(pluginRoot, 'ilm');
+  const sessionId = process.env.CLAUDE_SESSION_ID || '';
+  const ayah = selectAyah('', sessionId, pluginRoot);
   if (!ayah) {
     // DATA-05: silent failure — empty systemMessage, exit 0
     process.stdout.write(JSON.stringify({ systemMessage: '' }));
     process.exit(0);
   }
-  const displayText = formatAyah(ayah);
+  const displayText = renderPanel(ayah, { cols: process.stdout.columns || 80 });
   process.stdout.write(JSON.stringify({ systemMessage: displayText }));
   process.exit(0);
 }
