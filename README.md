@@ -61,8 +61,10 @@ claude --plugin-dir /path/to/claude-halal-code
 Add an alias to your shell config (`~/.zshrc` or `~/.bashrc`):
 
 ```bash
-alias claude='claude --plugin-dir /path/to/claude-halal-code'
+alias claude='claude --plugin-dir ~/path/to/claude-halal-code'
 ```
+
+Replace `~/path/to/claude-halal-code` with the actual path where you cloned the repo — e.g. `~/projects/claude-halal-code`.
 
 Then reload your shell:
 
