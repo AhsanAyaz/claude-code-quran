@@ -76,6 +76,16 @@ function boxLine(text, innerWidth, greenFn) {
 }
 
 /**
+ * Strip Arabic diacritics (tashkeel) before terminal display.
+ * Combining vowel marks (U+064B–U+065F, U+0610–U+061A, U+0670) are counted in
+ * string .length but render zero-width in most fonts, breaking monospace box alignment.
+ * Removing them makes letters display as connected, clean Arabic script.
+ */
+function stripDiacritics(text) {
+  return text.replace(/[\u0610-\u061A\u064B-\u065F\u0670]/g, '');
+}
+
+/**
  * renderPanel(ayah, opts) — pure function, returns formatted display string.
  *
  * @param {object} ayah - Ayah object from loadAyah()
@@ -93,7 +103,7 @@ function renderPanel(ayah, opts) {
     if (cols < NARROW_NO_BOX) {
       return [
         '------',
-        ayah.arabic,
+        stripDiacritics(ayah.arabic),
         ayah.transliteration,
         '"' + ayah.translation + '"',
         '\u2014 ' + ayah.surah_name + ' ' + ayah.surah_number + ':' + ayah.ayah_number,
@@ -123,8 +133,8 @@ function renderPanel(ayah, opts) {
       lines.push(boxLine('', innerWidth, green));
     }
 
-    // Ayah content lines
-    lines.push(boxLine(ayah.arabic, innerWidth, green));
+    // Ayah content lines — strip diacritics so combining marks don't break monospace alignment
+    lines.push(boxLine(stripDiacritics(ayah.arabic), innerWidth, green));
     lines.push(boxLine(dim(ayah.transliteration), innerWidth, green));
     lines.push(boxLine(ayah.translation, innerWidth, green));
     lines.push(boxLine(
