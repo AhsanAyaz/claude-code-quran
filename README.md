@@ -40,43 +40,27 @@ So it shows once, at the beginning, and gets out of the way.
 
 ## Installation
 
-**Requirements:** Claude Code, Node.js
+**Requirements:** Claude Code
+
+No dependencies. The plugin uses zero external packages.
+
+### Install via marketplace (recommended)
+
+```
+/plugin marketplace add AhsanAyaz/claude-halal-code
+/plugin install claude-halal-code@claude-halal-code
+```
+
+That's it. The plugin loads automatically on every session from then on.
+
+### Try it manually (session only)
 
 ```bash
 git clone https://github.com/AhsanAyaz/claude-halal-code
-cd claude-halal-code
-npm install
+claude --plugin-dir ./claude-halal-code
 ```
 
-### Try it once
-
-```bash
-claude --plugin-dir /path/to/claude-halal-code
-```
-
-`--plugin-dir` loads the plugin for the current session only. Good for testing.
-
-### Load it automatically on every session
-
-Add an alias to your shell config (`~/.zshrc` or `~/.bashrc`):
-
-```bash
-alias claude='claude --plugin-dir ~/path/to/claude-halal-code'
-```
-
-Replace `~/path/to/claude-halal-code` with the actual path where you cloned the repo — e.g. `~/projects/claude-halal-code`.
-
-Then reload your shell:
-
-```bash
-source ~/.zshrc  # or ~/.bashrc
-```
-
-Now every `claude` invocation will include the plugin.
-
-> **Note:** Once Claude Code's plugin marketplace is publicly available, this plugin
-> will be installable with a single command. Until then, the alias approach is the
-> recommended way to make it permanent.
+`--plugin-dir` loads the plugin for the current session only. Useful for testing.
 
 ---
 

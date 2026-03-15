@@ -1,14 +1,15 @@
 'use strict';
 
-const chalk = require('chalk');
-
-// Build chalk helpers on each call so NO_COLOR changes take effect.
-// Force level 3 — hook stdout is not a TTY so chalk defaults to level 0.
+// Zero-dependency ANSI helpers. Raw escape codes so the plugin works
+// when installed via marketplace (no npm install step in cache).
+// NO_COLOR: https://no-color.org/
 function makeHelpers() {
-  const c = new chalk.Instance({ level: process.env.NO_COLOR ? 0 : 3 });
+  if (process.env.NO_COLOR) {
+    return { green: s => s, dim: s => s };
+  }
   return {
-    green: s => c.hex('#2d6a4f')(s),
-    dim:   s => c.dim(s)
+    green: s => '\x1b[38;2;45;106;79m' + s + '\x1b[39m',
+    dim:   s => '\x1b[2m' + s + '\x1b[22m'
   };
 }
 
