@@ -22,12 +22,12 @@
 
 ### Display Rendering
 
-- [ ] **DISP-01**: Display is rendered as a framed box using ANSI escape codes and Unicode box-drawing characters (no external dependencies like boxen)
-- [ ] **DISP-02**: Box contains: ASCII mosque/dome art at top, Arabic ayah text, transliteration line, Hilali-Khan English translation, surah name + ayah reference at bottom
-- [ ] **DISP-03**: ASCII mosque art is at least 2 variants (small ~40 cols, standard ~60 cols) and selected based on terminal width (`process.stdout.columns`)
+- [x] **DISP-01**: Display is rendered as a framed box using ANSI escape codes and Unicode box-drawing characters (no external dependencies like boxen)
+- [x] **DISP-02**: Box contains: ASCII mosque/dome art at top, Arabic ayah text, transliteration line, Hilali-Khan English translation, surah name + ayah reference at bottom
+- [x] **DISP-03**: ASCII mosque art is at least 2 variants (small ~40 cols, standard ~60 cols) and selected based on terminal width (`process.stdout.columns`)
 - [x] **DISP-04**: Display output goes to stderr (shown immediately in terminal regardless of verbose mode)
-- [ ] **DISP-05**: Display respects `NO_COLOR` environment variable — renders plain text without ANSI codes when set
-- [ ] **DISP-06**: Arabic text is displayed as-is (plugin does not attempt RTL correction — English translation is the primary readable surface)
+- [x] **DISP-05**: Display respects `NO_COLOR` environment variable — renders plain text without ANSI codes when set
+- [x] **DISP-06**: Arabic text is displayed as-is (plugin does not attempt RTL correction — English translation is the primary readable surface)
 
 ### Thematic Selection
 
@@ -94,11 +94,11 @@
 | DATA-05 | Phase 1 | Complete |
 | DISP-04 | Phase 1 | Complete |
 | HOOK-01 | Phase 1 | Complete |
-| DISP-01 | Phase 2 | Pending |
-| DISP-02 | Phase 2 | Pending |
-| DISP-03 | Phase 2 | Pending |
-| DISP-05 | Phase 2 | Pending |
-| DISP-06 | Phase 2 | Pending |
+| DISP-01 | Phase 2 | Complete |
+| DISP-02 | Phase 2 | Complete |
+| DISP-03 | Phase 2 | Complete |
+| DISP-05 | Phase 2 | Complete |
+| DISP-06 | Phase 2 | Complete |
 | THEME-01 | Phase 2 | Pending |
 | THEME-02 | Phase 2 | Pending |
 | THEME-03 | Phase 2 | Pending |
