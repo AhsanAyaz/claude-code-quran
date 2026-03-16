@@ -5,7 +5,7 @@
 <h1 align="center">claude-halal-code</h1>
 
 <p align="center">
-  <a href="https://api.counterapi.dev/v1/claude-halal-code/sessions"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.counterapi.dev%2Fv1%2Fclaude-halal-code%2Fsessions&query=count&label=sessions%20tracked&color=green" alt="Sessions" /></a>
+  <a href="https://api.counterapi.dev/v2/code-with-ahsan/claude-halal-code"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.counterapi.dev%2Fv2%2Fcode-with-ahsan%2Fclaude-halal-code&query=count&label=sessions%20tracked&color=green" alt="Sessions" /></a>
 </p>
 
 <p align="center">
