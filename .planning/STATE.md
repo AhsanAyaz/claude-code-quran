@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-03-14)
 Phase: 1 of 4 (Foundation and Hook Scaffold)
 Plan: 0 of TBD in current phase
 Status: Ready to plan
-Last activity: 2026-03-14 — Roadmap created, ready for Phase 1 planning
+Last activity: 2026-03-16 - Completed quick task 1: add usage tracking to the plugin
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -92,6 +92,12 @@ None yet.
 ### Blockers/Concerns
 
 - [Phase 1]: Hook output mechanism ambiguity (CRITICAL) — three research sources conflict on whether `/dev/tty`, `systemMessage`, or `process.stderr` is the correct display channel. Must be resolved before Phase 2 rendering work begins.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 1 | add usage tracking to the plugin | 2026-03-16 | b361fd9 | [1-add-usage-tracking-to-the-plugin](./quick/1-add-usage-tracking-to-the-plugin/) |
 
 ## Session Continuity
 
